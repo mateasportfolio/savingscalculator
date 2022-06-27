@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="494" height="468" fill="none" viewBox="0 0 494 468">
+  <mask id="a" width="494" height="468" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+    <ellipse cx="246.645" cy="234" fill="#D9D9D9" rx="246.645" ry="234"/>
+  </mask>
+  <g mask="url(#a)">
+    <path fill="url(#b)" d="M-60.023-15.539h595.359v636.797H-60.023z"/>
+  </g>
+  <defs>
+    <pattern id="b" width="1" height="1" patternContentUnits="objectBoundingBox">
+      <use xlink:href="#c" transform="translate(-.035) scale(.0003)"/>
+    </pattern>
+  </defs>
+</svg>

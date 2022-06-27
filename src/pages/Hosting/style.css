@@ -1,0 +1,22 @@
+.hosting-page {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  white-space: wrap;
+  height: 100%;
+  padding: 20px 0;
+  width: 100%;
+}
+.diagramm2 {
+  padding: 40px 0px 40px 0px;
+  margin: 10px;
+  position: relative;
+}
+
+@media screen and (min-width: 1000px) {
+  .hosting-page {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+}

@@ -1,0 +1,17 @@
+.code-page {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  white-space: wrap;
+  height: 100%;
+  padding: 20px 0;
+  width: 100%;
+}
+
+@media screen and (min-width: 1000px) {
+  .code-page {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+}
