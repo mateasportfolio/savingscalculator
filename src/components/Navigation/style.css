@@ -1,0 +1,11 @@
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  width: 400px;
+}
+.nav__btn {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 10px;
+}

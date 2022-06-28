@@ -1,12 +1,9 @@
 import { useState } from "react";
-import "./App.css";
-import DebtForm from "./components/DebtForm/DebtForm";
-import { Navigation } from "./components/Navigation/Navigation";
-import { SavingsForm } from "./components/SavingsForm/SavingsForm";
-
+import "./app.css";
+import Navigation from "./components/Navigation/Navigation.jsx";
 function App() {
   const [component, setComponent] = useState("SAVINGS");
-
+  /*
   const renderForm = () => {
     switch (component) {
       case "SAVINGS":
@@ -16,7 +13,7 @@ function App() {
       default:
         return <SavingsForm />;
     }
-  };
+  };*/
 
   return (
     <div className="App">
@@ -24,7 +21,7 @@ function App() {
       {/* Psudeo Navigation */}
       <Navigation setComponent={setComponent} />
       {/* Rendered Form */}
-      {renderForm()}
+      {/*{renderForm()} */}
     </div>
   );
 }
