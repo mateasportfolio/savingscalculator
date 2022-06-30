@@ -1,11 +1,13 @@
 import React from "react";
 import "./app.css";
 import { Input } from "@chakra-ui/react";
+import Header from "./components/Header/Header";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-Header">
+      <Header />
+      <div className="Btn_Container">
         <Input
           htmlSize={20}
           width="auto"
@@ -18,7 +20,7 @@ function App() {
           placeholder="LIFTETIME SAVINGS"
           focusBorderColor="pink.400"
         />
-      </header>
+      </div>
     </div>
   );
 }

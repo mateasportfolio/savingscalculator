@@ -1,13 +1,12 @@
-import React from "react";
-import Logo from "/..assets/"
+import React from 'react'
+import "./style.css"
 
-export const Header = () => {
-    <div> 
-        <h4>
-            Savingscalculator
-        </h4>
-    
+function Header() {
+  return (
+    <div className="Header">
+
     </div>
-        
+  );
 }
- export default Header;
+
+export default Header;
