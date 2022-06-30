@@ -1,0 +1,9 @@
+.savings-form {
+  align-items: center;
+  border: 1px solid blue;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  height: 400px;
+  width: 400px;
+}

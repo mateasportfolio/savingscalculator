@@ -1,26 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import "./app.css";
-import { Input } from "@chakra-ui/react";
+import Navigation from "./components/Navigation/Navigation";
 import Header from "./components/Header/Header";
+import { SavingsForm } from "./components/SavingsForm/SavingsForm";
+import DebtForm from "./components/DebtForm/DebtForm";
 
 function App() {
+  const [component, setComponent] = useState("SAVINGS");
+
+  const renderForm = () => {
+    switch (component) {
+      case "SAVINGS":
+        return <SavingsForm />;
+      case "DEBT_PAYOFF":
+        return <DebtForm />;
+      default:
+        return <SavingsForm />;
+    }
+  };
+
   return (
     <div className="App">
       <Header />
-      <div className="Btn_Container">
-        <Input
-          htmlSize={20}
-          width="auto"
-          placeholder="DEBT_PAYOFF"
-          focusBorderColor="pink.400"
-        />
-        <Input
-          htmlSize={20}
-          width="auto"
-          placeholder="LIFTETIME SAVINGS"
-          focusBorderColor="pink.400"
-        />
-      </div>
+      <Navigation setComponent={setComponent} />
+      {renderForm()}
     </div>
   );
 }
