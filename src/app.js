@@ -1,27 +1,24 @@
-import { useState } from "react";
+import React from "react";
 import "./app.css";
-import Navigation from "./components/Navigation/Navigation.jsx";
-function App() {
-  const [setComponent] = useState("SAVINGS");
-  /*
-  const renderForm = () => {
-    switch (component) {
-      case "SAVINGS":
-        return <SavingsForm />;
-      case "DEBT_PAYOFF":
-        return <DebtForm />;
-      default:
-        return <SavingsForm />;
-    }
-  };*/
+import { Input } from "@chakra-ui/react";
 
+function App() {
   return (
     <div className="App">
-      {/* Header */}
-      {/* Psudeo Navigation */}
-      <Navigation setComponent={setComponent} />
-      {/* Rendered Form */}
-      {/*{renderForm()} */}
+      <header className="App-Header">
+        <Input
+          htmlSize={20}
+          width="auto"
+          placeholder="DEBT_PAYOFF"
+          focusBorderColor="pink.400"
+        />
+        <Input
+          htmlSize={20}
+          width="auto"
+          placeholder="LIFTETIME SAVINGS"
+          focusBorderColor="pink.400"
+        />
+      </header>
     </div>
   );
 }

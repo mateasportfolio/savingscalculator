@@ -1,10 +1,13 @@
 import React from "react";
+import Logo from "/..assets/"
 
-function Header () {
-    return (
-        <section>
-            Header
-        </section>
-    )
+export const Header = () => {
+    <div> 
+        <h4>
+            Savingscalculator
+        </h4>
+    
+    </div>
+        
 }
  export default Header;
