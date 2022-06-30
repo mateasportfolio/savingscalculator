@@ -1,5 +1,19 @@
 .Header {
   border: 1px solid black;
-  height: 64px;
+  height: 80px;
   width: 100%;
+  display: flex;
+  align-items: center;
+}
+.logo_container {
+  margin: 0px 20px;
+}
+.header-container {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.header_title {
+  font-weight: 600;
 }
