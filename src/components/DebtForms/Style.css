@@ -1,0 +1,8 @@
+.debt-form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 10px;
+  height: 400px;
+  width: 400px;
+}

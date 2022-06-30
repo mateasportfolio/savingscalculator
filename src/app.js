@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./app.css";
 import Navigation from "./components/Navigation/Navigation.jsx";
 function App() {
-  const [component, setComponent] = useState("SAVINGS");
+  const [setComponent] = useState("SAVINGS");
   /*
   const renderForm = () => {
     switch (component) {
