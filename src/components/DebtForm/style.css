@@ -6,3 +6,6 @@
   height: 400px;
   width: 400px;
 }
+.savings-form__form-control {
+  margin: 10px 0 10px 0;
+}
