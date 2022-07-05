@@ -1,5 +1,6 @@
 .debt-form {
   display: flex;
+  border: 1px solid lightgray;
   flex-direction: column;
   margin: auto;
   padding: 10px;
