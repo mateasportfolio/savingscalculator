@@ -1,15 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./style.css";
 import { FormControl, FormLabel } from "@chakra-ui/react";
 import { Input } from "@chakra-ui/react";
 import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
 
 export const SavingsForm = () => {
   const [startingBalance, setstartingBalance] = useState(3000);
   const [avgMonthlyIncome, setAvgMonthlyIncome] = useState(1000);
   const [monthlyExpenses, setMonthlyExpenses] = useState(1500);
-  const [financialOutlook, setfinancialOutlook] = useState(300);
-  const [value, onChange] = useState(new Date());
+  const [totalMonths, setTotalMonths] = useState(120);
+  const [totalSavings, setTotalSavings] = useState(1000);
+  const [endDate, setEndDate] = useState(new Date());
+
+  const handleEndDateChange = (event) => {
+    setEndDate(new Date(event));
+    let currentDate = new Date();
+    let years = endDate.getFullYear() - currentDate.getFullYear();
+    let months = endDate.getMonth() - currentDate.getMonth();
+    setTotalMonths(months + years * 12);
+  };
+
+  const calculateEverything = () => {
+    setTotalSavings(
+      (avgMonthlyIncome - monthlyExpenses) * totalMonths +
+        parseInt(startingBalance)
+    );
+  };
+
+  useEffect(() => {
+    calculateEverything();
+  }, [startingBalance, avgMonthlyIncome, monthlyExpenses, totalMonths]);
 
   return (
     <div className="savings-form">
@@ -48,21 +69,13 @@ export const SavingsForm = () => {
       </FormControl>
       <FormControl>
         <FormLabel>Projected financial outlook on :</FormLabel>
-
-        <Input
-          size="sm"
-          name="financial-outlook"
-          value={financialOutlook}
-          on
-          onChange={(e) => setfinancialOutlook(e.target.value)}
-          type="month"
-          id="endDate"
-          min="2016-06"
-          minDetail="century"
-          class="sc-pFZIQ gbgfMs"
-        />
+        <Calendar onChange={(e) => handleEndDateChange(e)} value={endDate} />
+      </FormControl>
+      <FormControl>
+        <FormLabel>your savings will be {totalSavings}</FormLabel>
       </FormControl>
     </div>
   );
 };
+
 export default SavingsForm;

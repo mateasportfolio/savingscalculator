@@ -12,3 +12,14 @@
 .savings-form__form-control {
   margin: 10px 0 10px 0;
 }
+.financial-outlook {
+  width: 400%;
+  min-width: 0px;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  position: relative;
+}
+
+.Calendar {
+  border: 2px solid red;
+}
