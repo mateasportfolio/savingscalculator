@@ -72,7 +72,7 @@ export const SavingsForm = () => {
         <CalendarIcon w={8} h={8} />
       </FormControl>
       <FormControl>
-        <FormLabel>your savings will be {totalSavings}</FormLabel>
+        <FormLabel>Your savings will be {totalSavings}</FormLabel>
       </FormControl>
     </div>
   );
