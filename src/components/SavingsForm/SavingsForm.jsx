@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./style.css";
 import { FormControl, FormLabel } from "@chakra-ui/react";
 import { Input } from "@chakra-ui/react";
+import { AddIcon } from "@chakra-ui/icons";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 
@@ -70,6 +71,7 @@ export const SavingsForm = () => {
       <FormControl>
         <FormLabel>Projected financial outlook on :</FormLabel>
         <Calendar onChange={(e) => handleEndDateChange(e)} value={endDate} />
+        <AddIcon CalendarIcon />
       </FormControl>
       <FormControl>
         <FormLabel>your savings will be {totalSavings}</FormLabel>
