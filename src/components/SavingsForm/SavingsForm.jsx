@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./style.css";
 import { FormControl, FormLabel } from "@chakra-ui/react";
 import { Input } from "@chakra-ui/react";
@@ -22,16 +22,22 @@ export const SavingsForm = () => {
     setTotalMonths(months + years * 12);
   };
 
-  const calculateEverything = () => {
+  const calculateEverything = useCallback(() => {
     setTotalSavings(
       (avgMonthlyIncome - monthlyExpenses) * totalMonths +
         parseInt(startingBalance)
     );
-  };
+  }, [startingBalance, avgMonthlyIncome, monthlyExpenses, totalMonths]);
 
   useEffect(() => {
     calculateEverything();
-  }, [startingBalance, avgMonthlyIncome, monthlyExpenses, totalMonths]);
+  }, [
+    calculateEverything,
+    startingBalance,
+    avgMonthlyIncome,
+    monthlyExpenses,
+    totalMonths,
+  ]);
 
   return (
     <div className="savings-form">
