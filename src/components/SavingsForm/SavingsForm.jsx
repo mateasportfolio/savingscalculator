@@ -55,9 +55,10 @@ export const SavingsForm = () => {
         <TriangleUpIcon
           w={8}
           h={8}
+          margin-left="16px"
           color="green"
           flexShrink={0}
-          display="inline-block"
+          display="flex"
           flexWrap="wrap"
           verticalAlign=" left"
           webkit-align-items="center"
