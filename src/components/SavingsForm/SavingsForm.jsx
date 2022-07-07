@@ -2,7 +2,11 @@ import React, { useState, useEffect } from "react";
 import "./style.css";
 import { FormControl, FormLabel } from "@chakra-ui/react";
 import { Input } from "@chakra-ui/react";
-import { CalendarIcon } from "@chakra-ui/icons";
+import {
+  CalendarIcon,
+  TriangleUpIcon,
+  TriangleDownIcon,
+} from "@chakra-ui/icons";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 
@@ -48,6 +52,16 @@ export const SavingsForm = () => {
       </FormControl>
       <FormControl>
         <FormLabel>Average Monthly Income (after taxes):</FormLabel>
+        <TriangleUpIcon
+          w={8}
+          h={8}
+          color="green"
+          flexShrink={0}
+          display="inline-block"
+          flexWrap="wrap"
+          verticalAlign=" left"
+          webkit-align-items="center"
+        />
         <Input
           name="avg-monthly-income"
           size="sm"
@@ -58,6 +72,17 @@ export const SavingsForm = () => {
       </FormControl>
       <FormControl>
         <FormLabel>Average Monthly Expenses:</FormLabel>
+        <TriangleDownIcon
+          w={8}
+          h={8}
+          color="red"
+          flexShrink={0}
+          display="inline-block"
+          flexWrap="wrap"
+          verticalAlign=" left"
+          webkit-align-items="center"
+        />
+
         <Input
           name="monthly-expenses"
           size="sm"
