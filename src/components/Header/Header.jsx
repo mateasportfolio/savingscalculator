@@ -9,10 +9,10 @@ function Header() {
         <img src={logo} alt="logo" />
       </Box>
       <Stack marginLeft="20px">
-        <Heading as="h2" color="white" size="lg">
+        <Heading as="h2" color="red.600" size="lg">
           Savings Calculator
         </Heading>
-        <Heading as="h4" color="white" size="md">
+        <Heading as="h4" color="red.500" size="md">
           Calculate Your Financial Outlook
         </Heading>
       </Stack>
