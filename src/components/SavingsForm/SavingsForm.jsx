@@ -3,11 +3,11 @@ import "./style.css";
 import { FormControl, FormLabel } from "@chakra-ui/react";
 import { Input } from "@chakra-ui/react";
 import {
-  CalendarIcon,
+  // CalendarIcon,
   TriangleUpIcon,
   TriangleDownIcon,
 } from "@chakra-ui/icons";
-import Calendar from "react-calendar";
+// import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 
 export const SavingsForm = () => {
@@ -18,25 +18,25 @@ export const SavingsForm = () => {
   const [totalSavings, setTotalSavings] = useState(1000);
   const [endDate, setEndDate] = useState(new Date());
 
-  const handleEndDateChange = (date) => {
-    setEndDate(new Date(date));
-    let currentDate = new Date();
-    let years = endDate.getFullYear() - currentDate.getFullYear();
-    let months = endDate.getMonth() - currentDate.getMonth();
-    setTotalMonths(months + years * 12);
-    console.log(totalMonths);
-  };
+  // const handleEndDateChange = (date) => {
+  //   setEndDate(new Date(date));
+  //   let currentDate = new Date();
+  //   let years = endDate.getFullYear() - currentDate.getFullYear();
+  //   let months = endDate.getMonth() - currentDate.getMonth();
+  //   setTotalMonths(months + years * 12);
+  //   console.log(totalMonths);
+  // };
 
-  const calculateEverything = () => {
-    const sum =
-      (avgMonthlyIncome - monthlyExpenses) * totalMonths + +startingBalance;
-    setTotalSavings(sum);
-  };
+  // const calculateEverything = () => {
+  //   const sum =
+  //     (avgMonthlyIncome - monthlyExpenses) * totalMonths + +startingBalance;
+  //   setTotalSavings(sum);
+  // };
 
-  useEffect(() => {
-    calculateEverything();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [startingBalance, avgMonthlyIncome, monthlyExpenses, totalMonths]);
+  // useEffect(() => {
+  //   calculateEverything();
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [startingBalance, avgMonthlyIncome, monthlyExpenses, totalMonths]);
 
   return (
     <div className="savings-form">
@@ -94,8 +94,12 @@ export const SavingsForm = () => {
       </FormControl>
       <FormControl>
         <FormLabel>Projected financial outlook on :</FormLabel>
-        <Calendar onChange={(e) => handleEndDateChange(e)} value={endDate} />
-        <CalendarIcon w={8} h={8} />
+        {/* <Calendar
+          color="outline"
+          onChange={(e) => handleEndDateChange(e)}
+          value={endDate}
+        />
+        <CalendarIcon w={8} h={8} /> */}
       </FormControl>
       <FormControl>
         <FormLabel>Your savings will be {totalSavings}</FormLabel>
