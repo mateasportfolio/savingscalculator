@@ -3,7 +3,7 @@ import Navigation from "./components/Navigation/Navigation";
 import Header from "./components/Header/Header";
 import { SavingsForm } from "./components/SavingsForm/SavingsForm";
 import DebtForm from "./components/DebtForm/DebtForm";
-import { Flex, Box } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 function App() {
   const [component, setComponent] = useState("SAVINGS");
@@ -22,9 +22,9 @@ function App() {
   return (
     <Box h={"calc(100vh)"}>
       <Header />
-      {/*
+
       <Navigation setComponent={setComponent} />
-      {renderForm()} */}
+      {renderForm()}
     </Box>
   );
 }

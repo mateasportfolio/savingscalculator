@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+// import "./style.css";
 import { logo } from "../../assets";
 import { Box, Flex, Heading, Stack } from "@chakra-ui/react";
 

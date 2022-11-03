@@ -7,16 +7,16 @@
   padding: 20px;
   height: 100%;
   width: 400px;
-  background-color: (to bottom, #d3b7ea 33%, #3399ff 95%);
+  background-color: (to bottom, #e6eab7 33%, #3399ff 95%);
 }
-
-.savings-form__form-control {
+/* .savings-form__form-control {
   margin: 10px 0 10px 0;
-}
+} */
+/*
 .financial-outlook {
   width: 400%;
   min-width: 0px;
   outline: 2px solid transparent;
   outline-offset: 2px;
   position: relative;
-}
+} */
