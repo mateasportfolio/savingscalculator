@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./style.css";
-import { FormControl, FormLabel } from "@chakra-ui/react";
+import { Box, FormControl, FormLabel } from "@chakra-ui/react";
 import { Input } from "@chakra-ui/react";
 import {
   // CalendarIcon,
@@ -39,7 +39,14 @@ export const SavingsForm = () => {
   // }, [startingBalance, avgMonthlyIncome, monthlyExpenses, totalMonths]);
 
   return (
-    <div className="savings-form">
+    <Box
+      h="400px"
+      w="400px"
+      border="1px solid white"
+      borderRadius="10px"
+      p="20px"
+      m="auto"
+    >
       <FormControl>
         <FormLabel>Starting Balance:</FormLabel>
         <Input
@@ -71,6 +78,7 @@ export const SavingsForm = () => {
           type="number"
         />
       </FormControl>
+
       <FormControl>
         <FormLabel>Average Monthly Expenses:</FormLabel>
         <TriangleDownIcon
@@ -98,7 +106,7 @@ export const SavingsForm = () => {
       <FormControl>
         {/* <FormLabel>Your savings will be {totalSavings}</FormLabel> */}
       </FormControl>
-    </div>
+    </Box>
   );
 };
 

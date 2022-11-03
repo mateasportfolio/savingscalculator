@@ -20,9 +20,13 @@ function App() {
   };
 
   return (
-    <Box h={"calc(100vh)"}>
+    <Box
+      h={"calc(100vh)"}
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+    >
       <Header />
-
       <Navigation setComponent={setComponent} />
       {renderForm()}
     </Box>
