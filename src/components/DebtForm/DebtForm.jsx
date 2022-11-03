@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Input } from "@chakra-ui/react";
-import "./style.css";
+
 import { FormControl, FormLabel } from "@chakra-ui/react";
 
 const DebtForm = () => {
