@@ -94,12 +94,6 @@ export const SavingsForm = () => {
       </FormControl>
       <FormControl>
         <FormLabel>Projected financial outlook on :</FormLabel>
-        {/* <Calendar
-          color="outline"
-          onChange={(e) => handleEndDateChange(e)}
-          value={endDate}
-        />
-        <CalendarIcon w={8} h={8} /> */}
       </FormControl>
       <FormControl>
         <FormLabel>Your savings will be {totalSavings}</FormLabel>
