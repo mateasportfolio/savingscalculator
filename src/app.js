@@ -7,6 +7,14 @@ import { Box } from "@chakra-ui/react";
 
 function App() {
   const [component, setComponent] = useState("SAVINGS");
+  // const { colorMode, toggleColorMode } = useColorMode();
+  // return (
+  //   <header>
+  //     <Button onClick={toggleColorMode}>
+  //       Toggle {colorMode === "light" ? "Dark" : "Light"}
+  //     </Button>
+  //   </header>
+  // );
 
   const renderForm = () => {
     switch (component) {

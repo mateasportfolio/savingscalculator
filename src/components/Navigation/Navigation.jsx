@@ -1,6 +1,5 @@
 import { Box, HStack } from "@chakra-ui/react";
 import React from "react";
-import "./style.css";
 
 const Navigation = ({ setComponent }) => {
   return (

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./style.css";
 import { Box, FormControl, FormLabel } from "@chakra-ui/react";
 import { Input } from "@chakra-ui/react";
 import {
