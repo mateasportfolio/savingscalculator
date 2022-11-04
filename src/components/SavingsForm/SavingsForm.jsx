@@ -42,10 +42,11 @@ export const SavingsForm = () => {
     <Box
       h="400px"
       w="400px"
-      border="1px solid white"
+      border="1px solid pink"
       borderRadius="10px"
       p="20px"
       m="auto"
+      mt="30px"
     >
       <FormControl>
         <FormLabel>Starting Balance:</FormLabel>

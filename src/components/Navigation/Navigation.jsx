@@ -1,16 +1,15 @@
+import { Box, HStack } from "@chakra-ui/react";
 import React from "react";
 import "./style.css";
 
 const Navigation = ({ setComponent }) => {
   return (
-    <div className="nav">
-      <span className="nav__btn" onClick={() => setComponent("SAVINGS")}>
+    <HStack spacing={40} mB="10px">
+      <Box color="white.500" onClick={() => setComponent("SAVINGS")}>
         Lifetime Savings
-      </span>
-      <span className="nav__btn" onClick={() => setComponent("DEBT_PAYOFF")}>
-        Debt Payoff
-      </span>
-    </div>
+      </Box>{" "}
+      <Box onClick={() => setComponent("DEBT_PAYOFF")}>Debt Payoff </Box>{" "}
+    </HStack>
   );
 };
 export default Navigation;
