@@ -31,14 +31,14 @@ function App() {
       flexDirection="column"
       alignItems="center"
     >
+      {" "}
       <Header />
-
       <Navigation setComponent={setComponent} />
       {renderForm()}
       <Calendar
         cursor="pointer"
         p="10px"
-        mb="20px"
+        m="20px"
         onChange={setDate}
         value={date}
         minDetail="year"
