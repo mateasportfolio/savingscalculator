@@ -1,13 +1,25 @@
-import { Box, HStack } from "@chakra-ui/react";
+import { Box, HStack, Text } from "@chakra-ui/react";
 import React from "react";
 
 const Navigation = ({ setComponent }) => {
   return (
     <HStack spacing={40} mB="10px">
-      <Box color="white.500" onClick={() => setComponent("SAVINGS")}>
-        Lifetime Savings
+      <Box
+        p="20px"
+        m="30px"
+        color="white.500"
+        onClick={() => setComponent("SAVINGS")}
+      >
+        <Text as="b" bg="purple.100">
+          Lifetime Savings
+        </Text>
       </Box>{" "}
-      <Box onClick={() => setComponent("DEBT_PAYOFF")}>Debt Payoff </Box>{" "}
+      <Box p="20px" m="30px" onClick={() => setComponent("DEBT_PAYOFF")}>
+        <Text bg="purple.100" as="b">
+          {" "}
+          Debt Payoff{" "}
+        </Text>
+      </Box>{" "}
     </HStack>
   );
 };

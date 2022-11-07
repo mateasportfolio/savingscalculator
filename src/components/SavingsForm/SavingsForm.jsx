@@ -1,41 +1,44 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Box, FormControl, FormLabel } from "@chakra-ui/react";
 import { Input } from "@chakra-ui/react";
-import {
-  // CalendarIcon,
-  TriangleUpIcon,
-  TriangleDownIcon,
-} from "@chakra-ui/icons";
-// import Calendar from "react-calendar";
-import "react-calendar/dist/Calendar.css";
+import { TriangleUpIcon, TriangleDownIcon } from "@chakra-ui/icons";
+//import "react-calendar/dist/Calendar.css";
 
 export const SavingsForm = () => {
   const [startingBalance, setstartingBalance] = useState(3000);
   const [avgMonthlyIncome, setAvgMonthlyIncome] = useState(1000);
   const [monthlyExpenses, setMonthlyExpenses] = useState(500);
-  // const [totalMonths, setTotalMonths] = useState(120);
-  // const [totalSavings, setTotalSavings] = useState(1000);
-  // const [endDate, setEndDate] = useState(new Date());
+  const [totalMonths, setTotalMonths] = useState(120);
+  const [totalSavings, setTotalSavings] = useState(1000);
+  const [endDate, setEndDate] = useState(new Date());
 
-  // const handleEndDateChange = (date) => {
-  //   setEndDate(new Date(date));
-  //   let currentDate = new Date();
-  //   let years = endDate.getFullYear() - currentDate.getFullYear();
-  //   let months = endDate.getMonth() - currentDate.getMonth();
-  //   setTotalMonths(months + years * 12);
-  //   console.log(totalMonths);
-  // };
+  const handleEndDateChange = (date) => {
+    setEndDate(new Date(date));
+    let currentDate = new Date();
+    let years = endDate.getFullYear() - currentDate.getFullYear();
+    let months = endDate.getMonth() - currentDate.getMonth();
+    setTotalMonths(months + years * 12);
+    handleEndDateChange();
+    console.log(totalMonths);
+  };
 
-  // const calculateEverything = () => {
-  //   const sum =
-  //     (avgMonthlyIncome - monthlyExpenses) * totalMonths + +startingBalance;
-  //   setTotalSavings(sum);
-  // };
+  const calculateEverything = () => {
+    const sum =
+      (avgMonthlyIncome - monthlyExpenses) * totalMonths + +startingBalance;
+    setTotalSavings(sum);
+  };
 
-  // useEffect(() => {
-  //   calculateEverything();
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, [startingBalance, avgMonthlyIncome, monthlyExpenses, totalMonths]);
+  useEffect(() => {
+    calculateEverything();
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [
+    handleEndDateChange,
+    startingBalance,
+    avgMonthlyIncome,
+    monthlyExpenses,
+    totalMonths,
+  ]);
 
   return (
     <Box
@@ -74,6 +77,7 @@ export const SavingsForm = () => {
           name="avg-monthly-income"
           size="sm"
           value={avgMonthlyIncome}
+          handleEndDateChange
           onChange={(e) => setAvgMonthlyIncome(e.target.value)}
           type="number"
         />
@@ -104,7 +108,7 @@ export const SavingsForm = () => {
         <FormLabel>Projected financial outlook on :</FormLabel>
       </FormControl>
       <FormControl>
-        {/* <FormLabel>Your savings will be {totalSavings}</FormLabel> */}
+        <FormLabel>Your savings will be {totalSavings}</FormLabel>
       </FormControl>
     </Box>
   );
