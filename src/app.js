@@ -4,7 +4,8 @@ import Header from "./components/Header/Header";
 import { SavingsForm } from "./components/SavingsForm/SavingsForm";
 import DebtForm from "./components/DebtForm/DebtForm";
 import { Box } from "@chakra-ui/react";
-import Calendar from "react-calendar";
+import { Calendar } from "react-calendar";
+
 // import { useColorMode } from "react";
 
 function App() {
@@ -30,14 +31,19 @@ function App() {
       flexDirection="column"
       alignItems="center"
     >
-      {/* <Button onClick={toggleColorMode}>
-        Toggle {colorMode === "light" ? "Dark" : "Light"}
-      </Button>
-      ; */}
       <Header />
-      <Calendar onChange={setDate} value={date} selectRange={true} size="sm" />
+
       <Navigation setComponent={setComponent} />
       {renderForm()}
+      <Calendar
+        cursor="pointer"
+        p="10px"
+        mb="20px"
+        onChange={setDate}
+        value={date}
+        minDetail="year"
+        onClickDay={(day) => console.log(day)}
+      />
     </Box>
   );
 }
