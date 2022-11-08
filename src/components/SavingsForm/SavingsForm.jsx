@@ -17,13 +17,14 @@ export const SavingsForm = () => {
     let years = endDate.getFullYear() - currentDate.getFullYear();
     let months = endDate.getMonth() - currentDate.getMonth();
     setTotalMonths(months + years * 12);
-    handleEndDateChange();
+
     console.log(totalMonths);
   };
 
   const calculateEverything = () => {
     const sum =
-      (avgMonthlyIncome - monthlyExpenses) * totalMonths + +startingBalance;
+      (avgMonthlyIncome - monthlyExpenses) * totalMonths +
+      parseInt(startingBalance);
     setTotalSavings(sum);
   };
 
@@ -85,7 +86,7 @@ export const SavingsForm = () => {
           flexShrink={0}
           display="inline-block"
           flexWrap="wrap"
-          verticalAlign=" left"
+          verticalAlign="left"
           webkit-align-items="center"
         />
 
@@ -100,13 +101,19 @@ export const SavingsForm = () => {
       <FormControl>
         <FormLabel>
           Projected financial outlook on :
-          <input
+          <Input
+            placeholder="Select Date and Time"
+            size="sm"
+            type="datetime-local"
+            onChange={handleEndDateChange}
+          />
+          {/* <input
             type="month"
             id="endDate"
             min="2021-06"
             defaultValue="2030-12"
             onChange={handleEndDateChange}
-          />
+          /> */}
         </FormLabel>
       </FormControl>
       <FormControl>
