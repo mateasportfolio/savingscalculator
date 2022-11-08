@@ -35,15 +35,17 @@ function App() {
       <Header />
       <Navigation setComponent={setComponent} />
       {renderForm()}
-      <Calendar
-        cursor="pointer"
-        p="10px"
-        m="20px"
-        onChange={setDate}
-        value={date}
-        minDetail="year"
-        onClickDay={(day) => console.log(day)}
-      />
+      <Box borderRadius={50} margin="20px" padding={30} bg={"cyan.700"}>
+        <Calendar
+          cursor="pointer"
+          p="10px"
+          m="20px"
+          onChange={setDate}
+          value={date}
+          minDetail="year"
+          onClickDay={(day) => console.log(day)}
+        />
+      </Box>
     </Box>
   );
 }

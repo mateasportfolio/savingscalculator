@@ -5,11 +5,11 @@ import { TriangleUpIcon, TriangleDownIcon } from "@chakra-ui/icons";
 //import "react-calendar/dist/Calendar.css";
 
 export const SavingsForm = () => {
-  const [startingBalance, setstartingBalance] = useState(3000);
-  const [avgMonthlyIncome, setAvgMonthlyIncome] = useState(1000);
-  const [monthlyExpenses, setMonthlyExpenses] = useState(500);
-  const [totalMonths, setTotalMonths] = useState(120);
-  const [totalSavings, setTotalSavings] = useState(1000);
+  const [startingBalance, setstartingBalance] = useState(1000);
+  const [avgMonthlyIncome, setAvgMonthlyIncome] = useState(0);
+  const [monthlyExpenses, setMonthlyExpenses] = useState(0);
+  const [totalMonths, setTotalMonths] = useState(0);
+  const [totalSavings, setTotalSavings] = useState(0);
   const [endDate, setEndDate] = useState(new Date());
 
   const handleEndDateChange = (date) => {
