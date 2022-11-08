@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Box, FormControl, FormLabel } from "@chakra-ui/react";
 import { Input } from "@chakra-ui/react";
 import { TriangleUpIcon, TriangleDownIcon } from "@chakra-ui/icons";
-//import "react-calendar/dist/Calendar.css";
 
 export const SavingsForm = () => {
   const [startingBalance, setstartingBalance] = useState(1000);
@@ -32,13 +31,7 @@ export const SavingsForm = () => {
     calculateEverything();
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [
-    handleEndDateChange,
-    startingBalance,
-    avgMonthlyIncome,
-    monthlyExpenses,
-    totalMonths,
-  ]);
+  }, [startingBalance, avgMonthlyIncome, monthlyExpenses, totalMonths]);
 
   return (
     <Box
@@ -105,7 +98,16 @@ export const SavingsForm = () => {
         />
       </FormControl>
       <FormControl>
-        <FormLabel>Projected financial outlook on :</FormLabel>
+        <FormLabel>
+          Projected financial outlook on :
+          <input
+            type="month"
+            id="endDate"
+            min="2021-06"
+            defaultValue="2030-12"
+            onChange={handleEndDateChange}
+          />
+        </FormLabel>
       </FormControl>
       <FormControl>
         <FormLabel>Your savings will be {totalSavings}</FormLabel>

@@ -11,13 +11,11 @@ class App extends React.Component {
   onChange = (date) => this.setState({ date });
   render() {
     return (
-      <div className="App">
-        <Calendar
-          onChange={this.onChange}
-          onClickDay={console.log(this)}
-          value={this.state.date}
-        />
-      </div>
+      <Calendar
+        onChange={this.onChange}
+        onClickDay={console.log(this)}
+        value={this.state.date}
+      />
     );
   }
 }

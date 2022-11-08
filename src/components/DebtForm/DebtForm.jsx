@@ -12,9 +12,10 @@ const DebtForm = () => {
         <FormLabel>Starting debt:</FormLabel>
 
         <Input
+          type="number"
           name="starting-Debt"
           size="sm"
-          margin-left="16px"
+          mL="16px"
           value={startingDebt}
           onChange={(e) => setStartingDebt(e.target.value)}
         />
@@ -22,8 +23,9 @@ const DebtForm = () => {
       <FormControl>
         <FormLabel>Average Monthly installment:</FormLabel>
         <Input
+          type="number"
           size="sm"
-          margin-left="16px"
+          mL="16px"
           value={monthlyInstallment}
           onChange={(e) => setMonthlyInstallment(e.target.value)}
         />
