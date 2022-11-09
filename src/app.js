@@ -26,9 +26,10 @@ function App() {
       display="flex"
       flexDirection="column"
       alignItems="center"
+      backgroundColor={"black"}
     >
       {" "}
-      <Header />
+      <Header backgroundColor={"#ffc8dd"} />
       <Navigation setComponent={setComponent} />
       {renderForm()}
     </Box>

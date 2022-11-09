@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Box, FormControl, FormLabel } from "@chakra-ui/react";
-import { Input } from "@chakra-ui/react";
-import { TriangleUpIcon, TriangleDownIcon } from "@chakra-ui/icons";
+import { Input, Text } from "@chakra-ui/react";
 
 export const SavingsForm = () => {
   const [startingBalance, setStartingBalance] = useState(1000);
@@ -39,65 +38,89 @@ export const SavingsForm = () => {
   }, [startingBalance, avgMonthlyIncome, monthlyExpenses, totalMonths]);
 
   return (
-    <Box
-      bg="blue.200"
-      h="600%vh"
-      w="450"
-      border="10px solid pink"
-      borderRadius="10px"
-      p={4}
-      m={1}
-    >
-      <FormControl m={1} p={2}>
-        <FormLabel p={1}>Starting Balance:</FormLabel>
-        <Input
-          p={2}
-          name="starting-balance"
-          size="sm"
-          value={startingBalance}
-          onChange={(e) => setStartingBalance(e.target.value)}
-          type="number"
-        />
-      </FormControl>
-      <FormControl m={1} p={2}>
-        <FormLabel p={1}>Average Monthly Income (after taxes):</FormLabel>
-        <TriangleUpIcon w={6} h={8} margin-left="16px" color="green" />
-        <Input
-          p={2}
-          name="avg-monthly-income"
-          size="sm"
-          value={avgMonthlyIncome}
-          onChange={(e) => setAvgMonthlyIncome(e.target.value)}
-          type="number"
-        />
-      </FormControl>
+    <Box w="400px">
+      <Box
+        bgGradient="linear(to-l, #FFCEE6, #EF87BE)"
+        borderRadius="10px 10px 0 0"
+      >
+        <FormControl m={1} p={2}>
+          <FormLabel>
+            <Text
+              p={1}
+              letterSpacing={0.25}
+              fontSize="30px"
+              color="black"
+              as="b"
+            >
+              Starting Balance
+            </Text>
+          </FormLabel>
+          <Input
+            color="black"
+            p={3}
+            name="starting-balance"
+            size="sm"
+            value={startingBalance}
+            onChange={(e) => setStartingBalance(e.target.value)}
+            type="number"
+            variant="flushed"
+          />
+        </FormControl>
+        <FormControl m={1} p={2}>
+          <FormLabel color="black" p={1} fontWeight="medium">
+            Average Monthly Income (after taxes):
+          </FormLabel>
 
-      <FormControl m={1} p={2}>
-        <FormLabel p={1}>Average Monthly Expenses:</FormLabel>
-        <TriangleDownIcon w={6} h={8} color="red" />
+          <Input
+            color="black"
+            p={2}
+            name="avg-monthly-income"
+            size="sm"
+            value={avgMonthlyIncome}
+            onChange={(e) => setAvgMonthlyIncome(e.target.value)}
+            type="number"
+            variant="flushed"
+          />
+        </FormControl>
+        <FormControl m={1} p={2}>
+          <FormLabel color="black" p={1}>
+            Average Monthly Expenses:
+          </FormLabel>
 
-        <Input
-          p={2}
-          name="monthly-expenses"
-          size="sm"
-          value={monthlyExpenses}
-          onChange={(e) => setMonthlyExpenses(e.target.value)}
-          type="number"
-        />
-      </FormControl>
-      <FormControl m={1} p={2}>
-        <FormLabel p={1}>Projected financial outlook on: </FormLabel>
-        <Input
-          p={2}
-          placeholder="Select Date and Time"
-          size="sm"
-          type="datetime-local"
-          onChange={(e) => handleEndDateChange(e.target.value)}
-        />
-      </FormControl>
-      <FormControl m={1} p={2}>
-        <FormLabel>Your savings will be {totalSavings}</FormLabel>
-      </FormControl>
+          <Input
+            color="black"
+            p={2}
+            name="monthly-expenses"
+            size="sm"
+            value={monthlyExpenses}
+            onChange={(e) => setMonthlyExpenses(e.target.value)}
+            type="number"
+            variant="flushed"
+          />
+        </FormControl>
+        <FormControl p={2}>
+          <FormLabel color="black" p={1}>
+            Projected financial outlook on:{" "}
+          </FormLabel>
+          <Input
+            p={2}
+            placeholder="Select Date and Time"
+            size="sm"
+            type="datetime-local"
+            color="black"
+            onChange={(e) => handleEndDateChange(e.target.value)}
+            variant="flushed"
+          />
+        </FormControl>
+      </Box>
+      <Box bg="white" borderRadius="0 0 10px 10px" h="100px" p="10px">
+        <FormControl>
+          <FormLabel color="black">Your savings will be</FormLabel>
+          <FormLabel fontSize={30} color="lightgreen">
+            ${totalSavings}
+          </FormLabel>
+        </FormControl>
+      </Box>
     </Box>
   );
 };

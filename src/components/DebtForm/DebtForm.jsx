@@ -15,7 +15,7 @@ const DebtForm = () => {
           type="number"
           name="starting-Debt"
           size="sm"
-          mL="16px"
+          ml="16px"
           value={startingDebt}
           onChange={(e) => setStartingDebt(e.target.value)}
         />
@@ -25,7 +25,7 @@ const DebtForm = () => {
         <Input
           type="number"
           size="sm"
-          mL="16px"
+          ml="16px"
           value={monthlyInstallment}
           onChange={(e) => setMonthlyInstallment(e.target.value)}
         />
