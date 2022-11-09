@@ -51,7 +51,7 @@ export const SavingsForm = () => {
               fontSize="30px"
               color="black"
               as="b"
-              textShadow="5px 5px 10px white"
+              // textShadow="5px 5px 10px white"
             >
               Starting Balance
             </Text>
@@ -121,8 +121,8 @@ export const SavingsForm = () => {
           </FormLabel>
           <FormLabel
             fontSize={30}
-            color="lightgreen"
-            textShadow="5px 5px 10px #00FF00"
+            color="#00FF00"
+            // textShadow="5px 5px 10px  #00FF00"
           >
             ${totalSavings}
           </FormLabel>

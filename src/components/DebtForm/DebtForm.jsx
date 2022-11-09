@@ -20,9 +20,8 @@ const DebtForm = () => {
             fontSize="m"
             color="black"
             as="b"
-            textShadow="5px 5px 10px white"
-            p={6}
-            fontWeight="extrabold"
+            p={1}
+            fontWeight="medium"
           >
             Starting debt:
           </FormLabel>
@@ -32,20 +31,19 @@ const DebtForm = () => {
             name="starting-Debt"
             size="lg"
             m="2px"
-            p={2}
+            p={1}
             value={startingDebt}
             onChange={(e) => setStartingDebt(e.target.value)}
           />
         </FormControl>
-        <FormControl>
+        <FormControl m={1} p={2}>
           <FormLabel
             letterSpacing={1}
             fontSize="m"
             color="black"
             as="b"
-            textShadow="5px 5px 10px white"
-            p={6}
-            fontWeight="extrabold"
+            p={1}
+            fontWeight="medium"
           >
             Average Monthly installment:
           </FormLabel>
@@ -53,7 +51,7 @@ const DebtForm = () => {
             type="number"
             variant="flushed"
             name="starting-Debt"
-            size="lg"
+            size="l"
             m="2px"
             p={2}
             value={monthlyInstallment}
@@ -68,7 +66,7 @@ const DebtForm = () => {
             as="b"
             textShadow="5px 5px 10px white"
             p={6}
-            fontWeight="extrabold"
+            fontWeight="medium"
           >
             Your debt will be paid off in{" "}
             {Math.ceil(startingDebt / monthlyInstallment)} months{" "}

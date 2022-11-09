@@ -13,7 +13,7 @@ function Header() {
           as="h2"
           size="lg"
           textColor="pink"
-          textShadow="5px 5px 10px pink"
+          // textShadow="5px 5px 10px pink"
         >
           Savings Calculator
         </Heading>
@@ -21,7 +21,7 @@ function Header() {
           as="h4"
           size="md"
           textColor="white"
-          textShadow="5px 5px 10px pink"
+          // textShadow="5px 5px 10px pink"
         >
           Calculate Your Financial Outlook
         </Heading>

@@ -11,9 +11,9 @@ const Navigation = ({ setComponent }) => {
     "2xl": "96em",
   };
   return (
-    <HStack spacing={40} mb={2}>
+    <HStack spacing={2} p="2px" mr="10px">
       <Box
-        p="100px"
+        p="20px"
         onClick={() => setComponent("SAVINGS")}
         fontSize={{ base: "24px", md: "40px", lg: "56px" }}
       >
@@ -22,7 +22,7 @@ const Navigation = ({ setComponent }) => {
             textColor="white"
             as="b"
             fontSize="3xl"
-            textShadow="5px 5px 10px pink"
+            // textShadow="5px 5px 10px pink"
           >
             Lifetime Savings
           </Text>
@@ -37,7 +37,7 @@ const Navigation = ({ setComponent }) => {
             textColor="white"
             as="b"
             fontSize="3xl"
-            textShadow="5px 5px 10px pink"
+            // textShadow="5px 5px 10px pink"
             // fontSize={{ base: 24, md: 0 }}
             // ml={{ md: 6 }}
           >
