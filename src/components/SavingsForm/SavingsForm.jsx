@@ -4,34 +4,38 @@ import { Input } from "@chakra-ui/react";
 import { TriangleUpIcon, TriangleDownIcon } from "@chakra-ui/icons";
 
 export const SavingsForm = () => {
-  const [startingBalance, setstartingBalance] = useState(1000);
+  const [startingBalance, setStartingBalance] = useState(0);
   const [avgMonthlyIncome, setAvgMonthlyIncome] = useState(0);
   const [monthlyExpenses, setMonthlyExpenses] = useState(0);
   const [totalMonths, setTotalMonths] = useState(0);
   const [totalSavings, setTotalSavings] = useState(0);
   const [endDate, setEndDate] = useState(new Date());
 
+  const monthDiff = (d1, d2) => {
+    let months;
+    months = (d2.getFullYear() - d1.getFullYear()) * 12;
+    months -= d1.getMonth();
+    months += d2.getMonth();
+    return months <= 0 ? 0 : months;
+  };
+
   const handleEndDateChange = (date) => {
     setEndDate(new Date(date));
     let currentDate = new Date();
-    let years = endDate.getFullYear() - currentDate.getFullYear();
-    let months = endDate.getMonth() - currentDate.getMonth();
-    setTotalMonths(months + years * 12);
-
-    console.log(totalMonths);
+    const months = monthDiff(currentDate, endDate);
+    setTotalMonths(months);
   };
 
   const calculateEverything = () => {
-    const sum =
-      (avgMonthlyIncome - monthlyExpenses) * totalMonths +
-      parseInt(startingBalance);
-    setTotalSavings(sum);
+    const totalIncome = avgMonthlyIncome * totalMonths;
+    const totalExpenses = monthlyExpenses * totalMonths;
+    const result = totalIncome - totalExpenses + parseInt(startingBalance);
+    setTotalSavings(result);
   };
 
   useEffect(() => {
     calculateEverything();
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line
   }, [startingBalance, avgMonthlyIncome, monthlyExpenses, totalMonths]);
 
   return (
@@ -50,7 +54,7 @@ export const SavingsForm = () => {
           name="starting-balance"
           size="sm"
           value={startingBalance}
-          onChange={(e) => setstartingBalance(e.target.value)}
+          onChange={(e) => setStartingBalance(e.target.value)}
           type="number"
         />
       </FormControl>
@@ -71,7 +75,6 @@ export const SavingsForm = () => {
           name="avg-monthly-income"
           size="sm"
           value={avgMonthlyIncome}
-          handleEndDateChange
           onChange={(e) => setAvgMonthlyIncome(e.target.value)}
           type="number"
         />
@@ -99,22 +102,13 @@ export const SavingsForm = () => {
         />
       </FormControl>
       <FormControl>
-        <FormLabel>
-          Projected financial outlook on :
-          <Input
-            placeholder="Select Date and Time"
-            size="sm"
-            type="datetime-local"
-            onChange={handleEndDateChange}
-          />
-          {/* <input
-            type="month"
-            id="endDate"
-            min="2021-06"
-            defaultValue="2030-12"
-            onChange={handleEndDateChange}
-          /> */}
-        </FormLabel>
+        <FormLabel>Projected financial outlook on: </FormLabel>
+        <Input
+          placeholder="Select Date and Time"
+          size="sm"
+          type="datetime-local"
+          onChange={(e) => handleEndDateChange(e.target.value)}
+        />
       </FormControl>
       <FormControl>
         <FormLabel>Your savings will be {totalSavings}</FormLabel>

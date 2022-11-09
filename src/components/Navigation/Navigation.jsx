@@ -3,7 +3,7 @@ import React from "react";
 
 const Navigation = ({ setComponent }) => {
   return (
-    <HStack spacing={40} mB="10px">
+    <HStack spacing={40} mb="10px">
       <Box
         p="20px"
         m="30px"
