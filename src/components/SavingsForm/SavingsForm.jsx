@@ -40,17 +40,17 @@ export const SavingsForm = () => {
 
   return (
     <Box
-      h="400px"
+      h="500px"
       w="400px"
       border="1px solid pink"
       borderRadius="10px"
-      p="20px"
-      m="auto"
-      mt="30px"
+      p={4}
+      m={10}
     >
-      <FormControl>
-        <FormLabel>Starting Balance:</FormLabel>
+      <FormControl m={1} p={2}>
+        <FormLabel p={1}>Starting Balance:</FormLabel>
         <Input
+          p={2}
           name="starting-balance"
           size="sm"
           value={startingBalance}
@@ -58,20 +58,11 @@ export const SavingsForm = () => {
           type="number"
         />
       </FormControl>
-      <FormControl>
-        <FormLabel>Average Monthly Income (after taxes):</FormLabel>
-        <TriangleUpIcon
-          w={8}
-          h={8}
-          margin-left="16px"
-          color="green"
-          flexShrink={0}
-          display="flex"
-          flexWrap="wrap"
-          verticalAlign=" left"
-          webkit-align-items="center"
-        />
+      <FormControl m={1} p={2}>
+        <FormLabel p={1}>Average Monthly Income (after taxes):</FormLabel>
+        <TriangleUpIcon w={6} h={8} margin-left="16px" color="green" />
         <Input
+          p={2}
           name="avg-monthly-income"
           size="sm"
           value={avgMonthlyIncome}
@@ -80,20 +71,12 @@ export const SavingsForm = () => {
         />
       </FormControl>
 
-      <FormControl>
-        <FormLabel>Average Monthly Expenses:</FormLabel>
-        <TriangleDownIcon
-          w={8}
-          h={8}
-          color="red"
-          flexShrink={0}
-          display="inline-block"
-          flexWrap="wrap"
-          verticalAlign="left"
-          webkit-align-items="center"
-        />
+      <FormControl m={1} p={2}>
+        <FormLabel p={1}>Average Monthly Expenses:</FormLabel>
+        <TriangleDownIcon w={6} h={8} color="red" />
 
         <Input
+          p={2}
           name="monthly-expenses"
           size="sm"
           value={monthlyExpenses}
@@ -101,16 +84,17 @@ export const SavingsForm = () => {
           type="number"
         />
       </FormControl>
-      <FormControl>
-        <FormLabel>Projected financial outlook on: </FormLabel>
+      <FormControl m={1} p={2}>
+        <FormLabel p={1}>Projected financial outlook on: </FormLabel>
         <Input
+          p={2}
           placeholder="Select Date and Time"
           size="sm"
           type="datetime-local"
           onChange={(e) => handleEndDateChange(e.target.value)}
         />
       </FormControl>
-      <FormControl>
+      <FormControl m={1} p={2}>
         <FormLabel>Your savings will be {totalSavings}</FormLabel>
       </FormControl>
     </Box>
