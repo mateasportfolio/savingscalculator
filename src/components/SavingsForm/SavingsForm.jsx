@@ -4,7 +4,7 @@ import { Input } from "@chakra-ui/react";
 import { TriangleUpIcon, TriangleDownIcon } from "@chakra-ui/icons";
 
 export const SavingsForm = () => {
-  const [startingBalance, setStartingBalance] = useState(0);
+  const [startingBalance, setStartingBalance] = useState(1000);
   const [avgMonthlyIncome, setAvgMonthlyIncome] = useState(0);
   const [monthlyExpenses, setMonthlyExpenses] = useState(0);
   const [totalMonths, setTotalMonths] = useState(0);
