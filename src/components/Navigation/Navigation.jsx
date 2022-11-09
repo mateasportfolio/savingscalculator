@@ -2,19 +2,45 @@ import { Box, Button, HStack, Text } from "@chakra-ui/react";
 import React from "react";
 
 const Navigation = ({ setComponent }) => {
+  // eslint-disable-next-line
+  const breakpoints = {
+    sm: "30em",
+    md: "48em",
+    lg: "62em",
+    xl: "80em",
+    "2xl": "96em",
+  };
   return (
     <HStack spacing={40} mb={2}>
-      <Box p={20} onClick={() => setComponent("SAVINGS")}>
-        <Button size="sm" variant="outline">
-          <Text textColor="white" as="m">
+      <Box
+        p="100px"
+        onClick={() => setComponent("SAVINGS")}
+        fontSize={{ base: "24px", md: "40px", lg: "56px" }}
+      >
+        <Button variant="ghost">
+          <Text
+            textColor="white"
+            as="b"
+            fontSize="3xl"
+            textShadow="5px 5px 10px pink"
+          >
             Lifetime Savings
           </Text>
         </Button>
       </Box>{" "}
-      <Box onClick={() => setComponent("DEBT_PAYOFF")}>
-        <Button textColor="white" size="sm" variant="outline">
-          <Text textColor="white" as="m">
-            {" "}
+      <Box
+        onClick={() => setComponent("DEBT_PAYOFF")}
+        fontSize={{ base: "24px", md: "40px", lg: "56px" }}
+      >
+        <Button variant="ghost">
+          <Text
+            textColor="white"
+            as="b"
+            fontSize="3xl"
+            textShadow="5px 5px 10px pink"
+            // fontSize={{ base: 24, md: 0 }}
+            // ml={{ md: 6 }}
+          >
             Debt Payoff{" "}
           </Text>
         </Button>
