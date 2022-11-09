@@ -40,12 +40,13 @@ export const SavingsForm = () => {
 
   return (
     <Box
-      h="500px"
-      w="400px"
-      border="1px solid pink"
+      bg="blue.200"
+      h="600%vh"
+      w="450"
+      border="10px solid pink"
       borderRadius="10px"
       p={4}
-      m={10}
+      m={1}
     >
       <FormControl m={1} p={2}>
         <FormLabel p={1}>Starting Balance:</FormLabel>
