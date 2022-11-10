@@ -34,7 +34,7 @@ const Navigation = ({ setComponent }) => {
         onClick={() => setComponent("DEBT_PAYOFF")}
         fontSize={{ base: "24px", md: "40px", lg: "56px" }}
       >
-        <Button variant="ghost">
+        <Button variant="ghost" colorScheme="pink">
           <Heading
             textColor="white"
             as="h5"
