@@ -1,13 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Box, FormControl, FormLabel } from "@chakra-ui/react";
 import { Input, Text } from "@chakra-ui/react";
-// import {
-//   NumberInput,
-//   NumberInputField,
-//   NumberInputStepper,
-//   NumberIncrementStepper,
-//   NumberDecrementStepper,
-// } from "@chakra-ui/react";
 
 export const SavingsForm = () => {
   const [startingBalance, setStartingBalance] = useState(1000);
@@ -50,7 +43,7 @@ export const SavingsForm = () => {
         bgGradient="linear(to-l, #FFCEE6, #EF87BE)"
         borderRadius="10px 10px 0 0"
       >
-        <FormControl m={1} p={2}>
+        <FormControl m={1} p={2} h="100px">
           <FormLabel>
             <Text
               p={1}
@@ -63,33 +56,20 @@ export const SavingsForm = () => {
               Starting Balance
             </Text>
           </FormLabel>
-          {/* <NumberInput size="sm" defaultValue={15} min={10}>
-            <NumberInputField focusBorderColor="red.200" />
-            <NumberInputStepper>
-              <NumberIncrementStepper
-                bg="green.200"
-                _active={{ bg: "green.300" }}
-                children="+"
-              />
-              <NumberDecrementStepper
-                bg="pink.200"
-                _active={{ bg: "pink.300" }}
-                children="-"
-              />
-            </NumberInputStepper>
-          </NumberInput> */}
+
           <Input
             color="white"
             p={3}
             name="starting-balance"
-            size="sm"
+            fontSize="l"
             value={startingBalance}
             onChange={(e) => setStartingBalance(e.target.value)}
             type="number"
             variant="flushed"
           />
         </FormControl>
-        <FormControl m={1} p={2}>
+
+        <FormControl m={1} p={2} h="100px">
           <FormLabel color="black" p={1} fontWeight="medium">
             Average Monthly Income (after taxes):
           </FormLabel>
@@ -98,14 +78,14 @@ export const SavingsForm = () => {
             color="white"
             p={2}
             name="avg-monthly-income"
-            size="sm"
+            fontSize="l"
             value={avgMonthlyIncome}
             onChange={(e) => setAvgMonthlyIncome(e.target.value)}
             type="number"
             variant="flushed"
           />
         </FormControl>
-        <FormControl m={1} p={2}>
+        <FormControl m={1} p={2} h="100px">
           <FormLabel color="black" p={1}>
             Average Monthly Expenses:
           </FormLabel>
@@ -114,21 +94,21 @@ export const SavingsForm = () => {
             color="white"
             p={2}
             name="monthly-expenses"
-            size="sm"
+            fontSize="l"
             value={monthlyExpenses}
             onChange={(e) => setMonthlyExpenses(e.target.value)}
             type="number"
             variant="flushed"
           />
         </FormControl>
-        <FormControl p={2}>
+        <FormControl p={2} h="100px">
           <FormLabel color="black" p={1}>
             Projected financial outlook on:{" "}
           </FormLabel>
           <Input
             p={2}
             placeholder="Select Date and Time"
-            size="sm"
+            fontSize="l"
             type="datetime-local"
             color="white"
             onChange={(e) => handleEndDateChange(e.target.value)}
@@ -136,6 +116,7 @@ export const SavingsForm = () => {
           />
         </FormControl>
       </Box>
+
       <Box bg="white" borderRadius="0 0 10px 10px" h="100px" p="10px">
         <FormControl>
           <FormLabel color="black" fontWeight="medium">

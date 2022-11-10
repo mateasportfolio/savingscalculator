@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Input } from "@chakra-ui/react";
+import { Box, Input, Text } from "@chakra-ui/react";
 import { FormControl, FormLabel } from "@chakra-ui/react";
 
 const DebtForm = () => {
@@ -7,13 +7,20 @@ const DebtForm = () => {
   const [monthlyInstallment, setMonthlyInstallment] = useState(300);
 
   return (
-    <div className="debt-form">
+    <Box w="400px">
       <Box
-        // fontSize={{ base: "24px", md: "40px", lg: "56px" }}
         w="400px"
         bgGradient="linear(to-l, #FFCEE6, #EF87BE)"
         borderRadius="10px 10px 0 0"
       >
+        <FormControl m={1} p={2} h="100px">
+          <FormLabel>
+            <Text p={1} letterSpacing={1} fontSize="30px" color="black" as="b">
+              Debt Calculator
+            </Text>
+          </FormLabel>
+        </FormControl>
+
         <FormControl m={1} p={2}>
           <FormLabel
             letterSpacing={1}
@@ -30,13 +37,13 @@ const DebtForm = () => {
             variant="flushed"
             name="starting-Debt"
             size="lg"
-            m="2px"
+            m={2}
             p={1}
             value={startingDebt}
             onChange={(e) => setStartingDebt(e.target.value)}
           />
         </FormControl>
-        <FormControl m={1} p={2}>
+        <FormControl p={2} h="100px">
           <FormLabel
             letterSpacing={1}
             fontSize="m"
@@ -58,6 +65,9 @@ const DebtForm = () => {
             onChange={(e) => setMonthlyInstallment(e.target.value)}
           />
         </FormControl>
+      </Box>
+
+      <Box bg="white" borderRadius="0 0 10px 10px" h="100px" p="10px">
         <FormControl>
           <FormLabel
             letterSpacing={1}
@@ -75,7 +85,7 @@ const DebtForm = () => {
           </FormLabel>
         </FormControl>
       </Box>
-    </div>
+    </Box>
   );
 };
 
