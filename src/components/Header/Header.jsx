@@ -8,17 +8,17 @@ function Header() {
       <Box h="60px" w="60px">
         <img src={logo} alt="logo" />
       </Box>
-      <Stack marginLeft="20px">
+      <Stack ml={2}>
         <Heading
-          as="h2"
-          size="lg"
+          as="h1"
+          size="2xl"
           textColor="pink"
           // textShadow="5px 5px 10px pink"
         >
           Savings Calculator
         </Heading>
         <Heading
-          as="h4"
+          as="h5"
           size="md"
           textColor="white"
           // textShadow="5px 5px 10px pink"

@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Box, FormControl, FormLabel } from "@chakra-ui/react";
 import { Input, Text } from "@chakra-ui/react";
+// import {
+//   NumberInput,
+//   NumberInputField,
+//   NumberInputStepper,
+//   NumberIncrementStepper,
+//   NumberDecrementStepper,
+// } from "@chakra-ui/react";
 
 export const SavingsForm = () => {
   const [startingBalance, setStartingBalance] = useState(1000);
@@ -56,8 +63,23 @@ export const SavingsForm = () => {
               Starting Balance
             </Text>
           </FormLabel>
+          {/* <NumberInput size="sm" defaultValue={15} min={10}>
+            <NumberInputField focusBorderColor="red.200" />
+            <NumberInputStepper>
+              <NumberIncrementStepper
+                bg="green.200"
+                _active={{ bg: "green.300" }}
+                children="+"
+              />
+              <NumberDecrementStepper
+                bg="pink.200"
+                _active={{ bg: "pink.300" }}
+                children="-"
+              />
+            </NumberInputStepper>
+          </NumberInput> */}
           <Input
-            color="black"
+            color="white"
             p={3}
             name="starting-balance"
             size="sm"
@@ -73,7 +95,7 @@ export const SavingsForm = () => {
           </FormLabel>
 
           <Input
-            color="black"
+            color="white"
             p={2}
             name="avg-monthly-income"
             size="sm"
@@ -89,7 +111,7 @@ export const SavingsForm = () => {
           </FormLabel>
 
           <Input
-            color="black"
+            color="white"
             p={2}
             name="monthly-expenses"
             size="sm"
@@ -108,7 +130,7 @@ export const SavingsForm = () => {
             placeholder="Select Date and Time"
             size="sm"
             type="datetime-local"
-            color="black"
+            color="white"
             onChange={(e) => handleEndDateChange(e.target.value)}
             variant="flushed"
           />

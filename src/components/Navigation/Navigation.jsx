@@ -1,4 +1,4 @@
-import { Box, Button, HStack, Text } from "@chakra-ui/react";
+import { Box, Button, HStack, Heading } from "@chakra-ui/react";
 import React from "react";
 
 const Navigation = ({ setComponent }) => {
@@ -18,14 +18,16 @@ const Navigation = ({ setComponent }) => {
         fontSize={{ base: "24px", md: "40px", lg: "56px" }}
       >
         <Button variant="ghost">
-          <Text
+          <Heading
+            as="h5"
+            size="xl"
             textColor="white"
-            as="b"
-            fontSize="3xl"
+            // as="b"
+            // fontSize="3xl"
             // textShadow="5px 5px 10px pink"
           >
             Lifetime Savings
-          </Text>
+          </Heading>
         </Button>
       </Box>{" "}
       <Box
@@ -33,16 +35,16 @@ const Navigation = ({ setComponent }) => {
         fontSize={{ base: "24px", md: "40px", lg: "56px" }}
       >
         <Button variant="ghost">
-          <Text
+          <Heading
             textColor="white"
-            as="b"
-            fontSize="3xl"
+            as="h5"
+            size="xl"
             // textShadow="5px 5px 10px pink"
             // fontSize={{ base: 24, md: 0 }}
             // ml={{ md: 6 }}
           >
             Debt Payoff{" "}
-          </Text>
+          </Heading>
         </Button>
       </Box>{" "}
     </HStack>
