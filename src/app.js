@@ -24,7 +24,10 @@ function App() {
     <Box
       minH={"calc(100vh)"}
       pb={40}
-      display="flex"
+      mt={{ base: 4, md: 0 }}
+      ml={{ md: 6 }}
+      display={{ md: "flex" }}
+      // width={[1, 1 / 2, 1 / 4]}
       flexDirection="column"
       alignItems="center"
       backgroundColor={"black"}
