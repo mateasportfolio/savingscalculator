@@ -18,14 +18,7 @@ const Navigation = ({ setComponent }) => {
         fontSize={{ base: "24px", md: "40px", lg: "56px" }}
       >
         <Button variant="ghost">
-          <Heading
-            as="h5"
-            size="xl"
-            textColor="white"
-            // as="b"
-            // fontSize="3xl"
-            // textShadow="5px 5px 10px pink"
-          >
+          <Heading as="h5" size="xl" textColor="white">
             Lifetime Savings
           </Heading>
         </Button>
@@ -35,14 +28,7 @@ const Navigation = ({ setComponent }) => {
         fontSize={{ base: "24px", md: "40px", lg: "56px" }}
       >
         <Button variant="ghost" colorScheme="pink">
-          <Heading
-            textColor="white"
-            as="h5"
-            size="xl"
-            // textShadow="5px 5px 10px pink"
-            // fontSize={{ base: 24, md: 0 }}
-            // ml={{ md: 6 }}
-          >
+          <Heading textColor="white" as="h5" size="xl">
             Debt Payoff{" "}
           </Heading>
         </Button>

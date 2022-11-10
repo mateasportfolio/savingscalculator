@@ -13,7 +13,7 @@ const DebtForm = () => {
         bgGradient="linear(to-l, #FFCEE6, #EF87BE)"
         borderRadius="10px 10px 0 0"
       >
-        <FormControl m={1} p={2}>
+        <FormControl p={2}>
           <FormLabel>
             <Text p={1} letterSpacing={1} fontSize="30px" color="black" as="b">
               Debt Calculator
@@ -21,7 +21,7 @@ const DebtForm = () => {
           </FormLabel>
         </FormControl>
 
-        <FormControl m={1} p={2} h="100px">
+        <FormControl p={2} h="100px">
           <FormLabel
             letterSpacing={1}
             fontSize="m"
@@ -32,13 +32,13 @@ const DebtForm = () => {
           >
             Starting debt:
           </FormLabel>
+
           <Input
             type="number"
             variant="flushed"
             name="starting-Debt"
-            size="lg"
-            m={2}
-            p={1}
+            size="l"
+            p={2}
             value={startingDebt}
             onChange={(e) => setStartingDebt(e.target.value)}
           />
@@ -55,11 +55,11 @@ const DebtForm = () => {
             Average Monthly installment:
           </FormLabel>
           <Input
+            textStyle="white"
             type="number"
             variant="flushed"
             name="starting-Debt"
             size="l"
-            m="2px"
             p={2}
             value={monthlyInstallment}
             onChange={(e) => setMonthlyInstallment(e.target.value)}
