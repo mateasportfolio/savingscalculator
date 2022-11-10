@@ -122,11 +122,7 @@ export const SavingsForm = () => {
           <FormLabel color="black" fontWeight="medium">
             Your savings will be
           </FormLabel>
-          <FormLabel
-            fontSize={30}
-            color="#00FF00"
-            // textShadow="5px 5px 10px  #00FF00"
-          >
+          <FormLabel fontSize={30} color="#00FF00">
             ${totalSavings}
           </FormLabel>
         </FormControl>

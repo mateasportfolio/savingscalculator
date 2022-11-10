@@ -16,6 +16,7 @@ const DebtForm = () => {
         <FormControl p={2}>
           <FormLabel>
             <Text p={1} letterSpacing={1} fontSize="30px" color="black" as="b">
+              {" "}
               Debt Calculator
             </Text>
           </FormLabel>
