@@ -13,7 +13,7 @@ const DebtForm = () => {
         bgGradient="linear(to-l, #FFCEE6, #EF87BE)"
         borderRadius="10px 10px 0 0"
       >
-        <FormControl m={1} p={2} h="100px">
+        <FormControl m={1} p={2}>
           <FormLabel>
             <Text p={1} letterSpacing={1} fontSize="30px" color="black" as="b">
               Debt Calculator
