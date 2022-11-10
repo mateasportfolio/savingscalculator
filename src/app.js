@@ -22,13 +22,13 @@ function App() {
 
   return (
     <Box
-      h={"calc(100vh)"}
+      minH={"calc(100vh)"}
+      pb={40}
       display="flex"
       flexDirection="column"
       alignItems="center"
       backgroundColor={"black"}
     >
-      {" "}
       <Header backgroundColor={"#ffc8dd"} />
       <Navigation setComponent={setComponent} />
       {renderForm()}

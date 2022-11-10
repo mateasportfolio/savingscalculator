@@ -21,7 +21,7 @@ const DebtForm = () => {
           </FormLabel>
         </FormControl>
 
-        <FormControl m={1} p={2}>
+        <FormControl m={1} p={2} h="100px">
           <FormLabel
             letterSpacing={1}
             fontSize="m"
