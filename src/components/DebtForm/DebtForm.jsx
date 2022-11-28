@@ -5,6 +5,7 @@ import { FormControl, FormLabel } from "@chakra-ui/react";
 const DebtForm = () => {
   const [startingDebt, setStartingDebt] = useState(3000);
   const [monthlyInstallment, setMonthlyInstallment] = useState(300);
+  const [yearsInstallment, setYearsInstallment] = useState(300);
 
   return (
     <Box w="400px">
@@ -64,6 +65,16 @@ const DebtForm = () => {
             p={2}
             value={monthlyInstallment}
             onChange={(e) => setMonthlyInstallment(e.target.value)}
+          />
+          <Input
+            textStyle="white"
+            type="number"
+            variant="flushed"
+            name="yearsInstallment"
+            size="l"
+            p={2}
+            value={yearsInstallment}
+            onChange={(e) => setYearsInstallment(e.target.value)}
           />
         </FormControl>
       </Box>
