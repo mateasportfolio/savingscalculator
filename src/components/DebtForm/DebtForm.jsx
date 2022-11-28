@@ -92,7 +92,9 @@ const DebtForm = () => {
           >
             Your debt will be paid off in{" "}
             {Math.ceil(startingDebt / monthlyInstallment)} months{" "}
-            {(e) => setMonthlyInstallment(e.target.value)}
+            {(e) => setMonthlyInstallment(e.target.value)} and{" "}
+            {Math.ceil(startingDebt / monthlyInstallment - yearsInstallment)}{" "}
+            years {(e) => setYearsInstallment(e.target.value)}
             {""}
           </FormLabel>
         </FormControl>

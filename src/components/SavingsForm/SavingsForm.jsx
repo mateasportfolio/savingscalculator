@@ -107,9 +107,12 @@ export const SavingsForm = () => {
           </FormLabel>
           <Input
             p={2}
-            placeholder="Select Date and Time"
-            fontSize="l"
-            type="datetime-local"
+            type="date"
+            id="start"
+            name="trip-start"
+            value="2018-07-22"
+            min="2018-01-01"
+            max="2060-12-31"
             color="white"
             onChange={(e) => handleEndDateChange(e.target.value)}
             variant="flushed"
